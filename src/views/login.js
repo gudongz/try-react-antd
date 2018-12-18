@@ -2,14 +2,22 @@ import React, { Component } from 'react'
 import { Form, Icon, Input, Button, Checkbox } from 'antd'
 import '../less/viewsStyle/login.less'
 
+// import { withRouter } from 'react-router-dom';
+
+import { createBrowserHistory } from 'history'
+const history = createBrowserHistory()
+
 const FormItem = Form.Item;
+
 
 class LoginForm extends Component {
     handleSubmit (e) {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if(!err){
+                sessionStorage.setItem('user', JSON.stringify(values))
                 this.props.history.push('/test1')
+                // history.push('/test1')
                 console.log('Received values of form: ', values);
                 
             }
@@ -52,4 +60,4 @@ class LoginForm extends Component {
 
 const Login = Form.create()(LoginForm);
 
-export default Login 
+export default Login  

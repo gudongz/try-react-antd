@@ -12,7 +12,7 @@ import Dropdown from '../views/dropdown'
 
 import '../less/layouts.less'
 
-import { BrowserRouter as Router , Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router , Route, Switch, Redirect } from "react-router-dom";
 
 const {  Content } = Layout
 
@@ -31,11 +31,13 @@ class layout extends Component {
                                 <Breadcrumb.Item>App</Breadcrumb.Item>
                             </Breadcrumb>
                             <Content className="content">
+                                {/* {this.props.children} */}
                                 <Switch>
                                     <Route exact  path="/test1" component={ Test1 } />
                                     <Route exact path="/test2" component={ Test2 } />
                                     <Route exact path="/affix" component={ Affix } />
                                     <Route exact path="/dropdown" component={ Dropdown } />
+                                    <Redirect to='/test1' />
                                 </Switch> 
                             </Content>
                         </Layout>
