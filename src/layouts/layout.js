@@ -31,12 +31,12 @@ class layout extends Component {
                                 <Breadcrumb.Item>App</Breadcrumb.Item>
                             </Breadcrumb>
                             <Content className="content">
-                              
-                                <Route exact  path="/test1" component={ Test1 } />
-                                <Route path="/test2" component={ Test2 } />
-                                <Route path="/affix" component={ Affix } />
-                                <Route path="/dropdown" component={ Dropdown } />
-                            
+                                <Switch>
+                                    <Route exact  path="/test1" component={ Test1 } />
+                                    <Route exact path="/test2" component={ Test2 } />
+                                    <Route exact path="/affix" component={ Affix } />
+                                    <Route exact path="/dropdown" component={ Dropdown } />
+                                </Switch> 
                             </Content>
                         </Layout>
                     </Layout>
