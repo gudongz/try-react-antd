@@ -19,17 +19,13 @@ const menu = (
 class dropdown extends Component{
     render() {
         return (
-            <Page layout="public">
-                <Section slot="mainview">
-                    <Dropdown overlay={menu} trigger={['click']}>
-                        <a className="ant-dropdown-link" href="#">
-                            Click me <Icon type="down" />
-                        </a>
-                    </Dropdown>
+            <Dropdown overlay={menu} trigger={['click']}>
+                <a className="ant-dropdown-link" href="#">
+                    Click me <Icon type="down" />
+                </a>
+            </Dropdown>
                 
-                </Section>
-            </Page>
-            
+               
         )
     }
 }

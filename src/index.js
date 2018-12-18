@@ -19,17 +19,7 @@ const layouts = {
 
 ReactDOM.render(
     <BrowserRouter>
-        {/* <App></App> */}
-        <LayoutProvider layouts={layouts}>
-            <Router>
-                <Switch>
-                    <Route exact  path="/test1" component={ Test1 } />
-                    <Route path="/test2" component={ Test2 } />
-                    <Route path="/affix" component={ Affix } />
-                    <Route path="/dropdown" component={ Dropdown } />
-                </Switch>
-            </Router>
-        </LayoutProvider>
+        <App></App> 
     </BrowserRouter>
     
     ,document.getElementById('root')

@@ -11,39 +11,33 @@ class Demo extends Component {
 
     render() {
         return (
-            // <div>
-                <Page layout="public">
-                    <Section slot="mainview">
-                        <Affix offsetTop={this.state.top}>
-                            <Button
-                                type="primary"
-                                onClick={() => {
-                                this.setState({
-                                    top: this.state.top + 10,
-                                });
-                                }}
-                            >
-                                Affix top
-                            </Button>
-                        </Affix>
-                        <br />
-                        <Affix offsetBottom={this.state.bottom}>
-                            <Button
-                                type="primary"
-                                onClick={() => {
-                                this.setState({
-                                    bottom: this.state.bottom + 10,
-                                });
-                                }}
-                            >
-                            Affix bottom
-                            </Button>
-                        </Affix>
-                    
-                    </Section>
-                </Page>
-                
-            // </div>
+            <div>
+                <Affix offsetTop={this.state.top}>
+                    <Button
+                        type="primary"
+                        onClick={() => {
+                        this.setState({
+                            top: this.state.top + 10,
+                        });
+                        }}
+                    >
+                        Affix top
+                    </Button>
+                </Affix>
+                <br />
+                <Affix offsetBottom={this.state.bottom}>
+                    <Button
+                        type="primary"
+                        onClick={() => {
+                        this.setState({
+                            bottom: this.state.bottom + 10,
+                        });
+                        }}
+                    >
+                    Affix bottom
+                    </Button>
+                </Affix>
+             </div>
         );
     }
 }
