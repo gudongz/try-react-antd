@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 import { Menu, Dropdown, Icon } from 'antd';
-import { Page, Section } from 'react-page-layout';
 
 const menu = (
     <Menu>

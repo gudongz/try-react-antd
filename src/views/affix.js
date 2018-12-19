@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 import { Affix, Button } from 'antd';
-import { Page, Section } from 'react-page-layout';
 
 class Demo extends Component {
     state = {

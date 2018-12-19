@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import { Layout, Breadcrumb } from 'antd'
+import { Layout } from 'antd'
 
 import HeaderMenu from './header'
 import SiderBar from './sider'
+import Bread from './breadcrumb'
 
 import Test1 from '../views/test1'
 import Test2 from '../views/test2'
@@ -12,7 +13,7 @@ import Dropdown from '../views/dropdown'
 
 import '../less/layouts.less'
 
-import { BrowserRouter as Router , Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 const {  Content } = Layout
 
@@ -21,17 +22,13 @@ class layout extends Component {
         return (
             <div className="container">
                 <Layout>
-                    <HeaderMenu></HeaderMenu>
+                    <HeaderMenu />
                     <Layout>
-                        <SiderBar></SiderBar>
+                        <SiderBar />
                         <Layout className="layout-content">
-                            <Breadcrumb className="breadcrumb">
-                                <Breadcrumb.Item>Home</Breadcrumb.Item>
-                                <Breadcrumb.Item>List</Breadcrumb.Item>
-                                <Breadcrumb.Item>App</Breadcrumb.Item>
-                            </Breadcrumb>
+                            <Bread />
                             <Content className="content">
-                                {/* {this.props.children} */}
+
                                 <Switch>
                                     <Route exact  path="/test1" component={ Test1 } />
                                     <Route exact path="/test2" component={ Test2 } />
@@ -39,6 +36,7 @@ class layout extends Component {
                                     <Route exact path="/dropdown" component={ Dropdown } />
                                     <Redirect to='/test1' />
                                 </Switch> 
+
                             </Content>
                         </Layout>
                     </Layout>

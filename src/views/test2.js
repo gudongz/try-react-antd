@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Page, Section } from 'react-page-layout';
 
 class Test2 extends Component {
     render() {
