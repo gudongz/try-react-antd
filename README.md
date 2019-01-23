@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # tryReactAntd
 
 #### 项目介绍
@@ -49,3 +50,6 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
+=======
+# try-react-antd
+>>>>>>> 46383b7b0ed736e904ef5b32ca8281e4780d3dc7
