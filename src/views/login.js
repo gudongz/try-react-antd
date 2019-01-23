@@ -6,7 +6,6 @@ import { withRouter } from 'react-router-dom'
 
 const FormItem = Form.Item;
 
-
 class LoginForm extends Component { 
 
     handleSubmit (e) {

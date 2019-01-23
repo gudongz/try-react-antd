@@ -9,7 +9,7 @@ const menu = (
         </Menu.Item>
         <Menu.Item key="1">
             <a href="http://www.taobao.com/">2nd menu item</a>
-        </Menu.Item>
+        </Menu.Item> 
         <Menu.Divider />
         <Menu.Item key="3">3rd menu item</Menu.Item>
     </Menu>
@@ -19,9 +19,9 @@ class dropdown extends Component{
     render() {
         return (
             <Dropdown overlay={menu} trigger={['click']}>
-                <a className="ant-dropdown-link" href="#">
+                <button className="ant-dropdown-link">
                     Click me <Icon type="down" />
-                </a>
+                </button>
             </Dropdown>
                 
                
